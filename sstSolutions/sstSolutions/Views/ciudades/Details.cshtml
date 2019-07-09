@@ -1,0 +1,30 @@
+﻿@model sstSolutions.Models.ciudad
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ciudad</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ciudadUTC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ciudadUTC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ciudadNombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ciudadNombre)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ciudadId"><button class="btn btn-primary">Editar</button></a> |
+    <a asp-action="Index"><button class="btn btn-primary">Regresar al listado</button></a>
+</div>

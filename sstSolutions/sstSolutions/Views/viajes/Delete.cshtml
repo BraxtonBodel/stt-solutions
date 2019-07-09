@@ -1,0 +1,39 @@
+﻿@model sstSolutions.Models.viaje
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Esta seguro de eliminar este viaje?</h3>
+<div>
+    <h4>viaje</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.horaPartida)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.horaPartida)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.horaLlegada)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.horaLlegada)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.tiempoViaje)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.tiempoViaje)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="viajeId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index"><button class="btn btn-primary">Regresar al listado</button></a>
+    </form>
+</div>
